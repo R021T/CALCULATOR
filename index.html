@@ -51,8 +51,13 @@
             function div(){
                 var i=parseFloat(document.getElementById("n1").value);
                 var j=parseFloat(document.getElementById("n2").value);
-                if((typeof i=="number" && !Number.isNaN(i)) && (typeof j=="number" && !Number.isNaN(j)) && j!=0){
-                    document.getElementById("res").innerText="Result is "+(i/j)+".";
+                if((typeof i=="number" && !Number.isNaN(i)) && (typeof j=="number" && !Number.isNaN(j))){
+                    if(j!=0){
+                        document.getElementById("res").innerText="Result is "+(i/j)+".";
+                    }
+                    else{
+                        document.getElementById("res").innerText="Cannot divide by 0!";
+                    }
                 }
                 else{
                     document.getElementById("res").innerText="Invalid input!";

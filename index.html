@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <h1 class="title">Simple Calculator</h1>
+    </head>
+    <body>
+        <div class="box">
+            <label class="num1">Enter the first number:</label>
+            <input type="text" class="n1" id="n1">
+            <br>
+            <label class="num2">Enter the second number:</label>
+            <input type="text" class="n2" id="n2">
+            <br>
+            <button class="plus" onclick="add()">+</button>
+            <button class="minus" onclick="sub()">-</button>
+            <button class="star" onclick="mul()">*</button>
+            <button class="slash" onclick="div()">/</button>
+            <label class="res" id="res"></label>
+        </div>
+        <script>
+            function add(){
+                var i=parseFloat(document.getElementById("n1").value);
+                var j=parseFloat(document.getElementById("n2").value);
+                if((typeof i=="number" && !Number.isNaN(i)) && (typeof j=="number" && !Number.isNaN(j))){
+                    document.getElementById("res").innerText="Result is "+(i+j)+".";
+                }
+                else{
+                    document.getElementById("res").innerText="Invalid input!";
+                }
+            }
+            function sub(){
+                var i=parseFloat(document.getElementById("n1").value);
+                var j=parseFloat(document.getElementById("n2").value);
+                if((typeof i=="number" && !Number.isNaN(i)) && (typeof j=="number" && !Number.isNaN(j))){
+                    document.getElementById("res").innerText="Result is "+(i-j)+".";
+                }
+                else{
+                    document.getElementById("res").innerText="Invalid input!";
+                }
+            }
+            function mul(){
+                var i=parseFloat(document.getElementById("n1").value);
+                var j=parseFloat(document.getElementById("n2").value);
+                if((typeof i=="number" && !Number.isNaN(i)) && (typeof j=="number" && !Number.isNaN(j))){
+                    document.getElementById("res").innerText="Result is "+(i*j)+".";
+                }
+                else{
+                    document.getElementById("res").innerText="Invalid input!";
+                }
+            }
+            function div(){
+                var i=parseFloat(document.getElementById("n1").value);
+                var j=parseFloat(document.getElementById("n2").value);
+                if((typeof i=="number" && !Number.isNaN(i)) && (typeof j=="number" && !Number.isNaN(j)) && j!=0){
+                    document.getElementById("res").innerText="Result is "+(i/j)+".";
+                }
+                else{
+                    document.getElementById("res").innerText="Invalid input!";
+                }
+            }
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+            h1{
+                color: royalblue;
+                font-size: 50px;
+                margin-left: 35%;
+                margin-top: 5%;
+            }
+            .box{
+                width: 50%;
+                height: 50%;
+                border-radius: 20px;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                margin-left: 25%;
+                margin-top: 5%;
+            }
+            .num1{
+                position: relative;
+                font-size: 25px;
+                margin-left: 12%;
+                top: 10%;
+                color: #7a7a7a;
+            }
+            .n1{
+                position: relative;
+                margin-left: 10%;
+                top: 10%;
+                background: #eef2ff;
+                border-radius: 10px;
+                border: 0;
+                width: 30%;
+                height: 10%;
+                text-align: center;
+                outline: 0;
+            }
+            .num2{
+                position: relative;
+                font-size: 25px;
+                margin-left: 12%;
+                top: 20%;
+                color: #7a7a7a;
+            }
+            .n2{
+                position: relative;
+                top: 20%;
+                margin-left: 4%;
+                background: #eef2ff;
+                border-radius: 10px;
+                border: 0;
+                width: 30%;
+                height: 10%;
+                text-align: center;
+                outline: 0;
+            }
+            button{
+                position: relative;
+                top: 32%;
+                margin-left: 10%;
+                width: 7%;
+                height: 14%;
+                border-radius: 10px;
+                border: 0;
+                background: royalblue;
+                color: white;
+                font-size: 20px;
+            }
+            .plus{
+                margin-left: 20%;
+            }
+            button:hover{
+                color: black;
+                background: #eef2ff;
+                cursor: pointer;
+            }
+            .res{
+            position: relative;
+            font-size: 25px;
+            margin-left: 40%;
+            top: 45%;
+            color: #7a7a7a;
+            text-align: center;
+            }
+            @media(width<1000px){
+                h1{
+                    margin-left: 15%;
+                    margin-top: 20%;
+                    font-size: 80px;
+                }
+                .box{
+                    margin-top: 25%;
+                    width: 60%;
+                    height: 40%;
+                    margin-left: 20%;
+                }
+                .n1{
+                    margin-top: 5%;
+                    width: 80%;
+                }
+                .num2{
+                    top: 18%;
+                }
+                .n2{
+                    margin-top: 2%;
+                    margin-left: 10%;
+                    width: 80%;
+                }
+                button{
+                    width: 20%;
+                    height: 10%;
+                }
+                .star,.slash{
+                    margin-top: 5%;
+                }
+                .plus,.star{
+                    margin-left: 28%;
+                }
+                .plus,.minus{
+                    margin-top: -5%;
+                }
+                .minus,.slash{
+                    margin-left: 52%;
+                    margin-top: -14.5%;
+                }
+                .res{
+                    margin-left: 38%;
+                    top: 40%;
+                }
+            }
+            @media(height<1000px){
+            }
+        </style>
+    </body>
+</html>

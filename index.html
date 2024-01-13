@@ -17,6 +17,11 @@
             <button class="slash" onclick="div()">/</button>
             <input type="text" class="res" id="res" readonly>
         </div>
+        <footer>
+            <span class="a">a</span>
+            <span class="simple">simple</span>
+            <span class="calculator">calculator</span>
+        </footer>
         <script>
             function add(){
                 var i=parseFloat(document.getElementById("n1").value);
@@ -159,6 +164,22 @@
                 outline: 0;
                 font-size: 20px;
             }
+            footer{
+                position: absolute;
+                top: 90%;
+                left: 45%;
+                font-size: 20px;
+                filter: opacity(75%);
+            }
+            .a{
+                color: #7a7a7a;
+            }
+            .simple{
+                color: #eef2ff;
+            }
+            .calculator{
+                color: royalblue;
+            }
             @media(width<1000px){
                 h1{
                     margin-left: 25%;
@@ -217,6 +238,11 @@
                     font-size: 50px;
                     width: 80%;
                     height: 8%;
+                }
+                footer{
+                    font-size: 50px;
+                    left: 28%;
+                    top: 92%;
                 }
             }
         </style>
